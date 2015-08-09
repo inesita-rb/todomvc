@@ -8,9 +8,9 @@ class App
   )
 
   def initialize
-    @_header ||= Header.new
-    @_main   ||= Main.new
-    @_footer ||= Footer.new
+    @_header = Header.new
+    @_main   = Main.new
+    @_footer = Footer.new
   end
 
   def render

@@ -1,8 +1,9 @@
 source "https://rubygems.org"
 
-gem 'opal' #, github: 'opal/opal'#, ref: '3c3fdc3'#, branch: '0-8-stable'
+gem 'opal', github: 'opal/opal'
 gem 'opal-browser'
-gem 'inesita'#, path: '/Users/fazibear/dev/inesita'
+gem 'opal-activerecord', github: 'boberetezeke/opal-activerecord'
+gem 'inesita'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-todomvc-app-css'

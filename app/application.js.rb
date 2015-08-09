@@ -2,8 +2,10 @@ require 'virtual-dom'
 require 'opal'
 require 'browser'
 require 'inesita'
+require 'active_record'
 
-require_tree './models'
+ActiveRecord::Base.connection = ActiveRecord::LocalStorageStore.new(LocalStorage.new)
+
 require_tree './components'
 
 $document.ready do
@@ -14,11 +16,3 @@ $document.ready do
   ).mount($document['todoapp'])
 end
 
-#require 'test'
-
-#require 'browser/storage'
-
-#store = $window.storage('inesita-todos')
-#store['sdfsdf'] = 'sdfsdf'
-#store['vvv'] = 'xcvxcv'
-#store.save

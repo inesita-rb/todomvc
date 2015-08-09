@@ -1,20 +1,32 @@
+GIT
+  remote: git://github.com/boberetezeke/opal-activerecord.git
+  revision: e166f3fcb98750f03c34d840fbfa45fd750619f9
+  specs:
+    opal-activerecord (0.0.1)
+      opal (>= 0.5.0, < 1.0.0)
+
+GIT
+  remote: git://github.com/opal/opal.git
+  revision: 916ec1f4a7417c20008439fc30d55f46f1482ad7
+  specs:
+    opal (0.9.0.dev)
+      hike (~> 1.2)
+      sourcemap (~> 0.1.0)
+      sprockets (~> 3.1)
+      tilt (>= 1.4)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
   specs:
     hike (1.2.3)
-    inesita (0.0.11)
+    inesita (0.0.12)
       opal
       opal-virtual-dom
       rack-rewrite
       sass
       slim
       thor
-    opal (0.8.0)
-      hike (~> 1.2)
-      sourcemap (~> 0.1.0)
-      sprockets (~> 3.1)
-      tilt (>= 1.4)
     opal-browser (0.2.0)
       opal
       paggio
@@ -42,7 +54,8 @@ PLATFORMS
 
 DEPENDENCIES
   inesita
-  opal
+  opal!
+  opal-activerecord!
   opal-browser
   rails-assets-todomvc-app-css!
   rails-assets-todomvc-common!
