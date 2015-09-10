@@ -1,10 +1,10 @@
-# [Inesita](https://github.com/fazibear/inesita) TodoMVC app
+# [Inesita](https://github.com/inesita-rb/inesita) TodoMVC app
 
 WORK IN PROGRESS
 
 ```sh
-$ git clone https://github.com/fazibear/inesita-todomvc.git
-$ cd inesita-todomvc
+$ git clone https://github.com/inesita-rb/todomvc.git
+$ cd todomvc
 $ bundle install
 $ bundle exec inesita server
 ```
