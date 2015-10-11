@@ -1,6 +1,4 @@
-# [Inesita](https://github.com/inesita-rb/inesita) TodoMVC app
-
-WORK IN PROGRESS
+# TodoMVC example written with [Inesita](https://github.com/inesita-rb/inesita)
 
 ```sh
 $ git clone https://github.com/inesita-rb/todomvc.git
