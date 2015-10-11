@@ -2,6 +2,7 @@ require 'virtual-dom'
 require 'opal'
 require 'securerandom'
 require 'browser'
+require 'browser/storage'
 require 'browser/effects'
 require 'inesita'
 
