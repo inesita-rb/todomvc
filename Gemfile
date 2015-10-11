@@ -2,8 +2,7 @@ source "https://rubygems.org"
 
 gem 'opal', github: 'opal/opal'
 gem 'opal-browser'
-gem 'opal-activerecord', github: 'boberetezeke/opal-activerecord'
-gem 'inesita'
+gem 'inesita', path: '/Users/fazibear/dev/inesita'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-todomvc-app-css'
