@@ -1,17 +1,9 @@
 class Footer
   include Inesita::Component
 
-  def uncomplete_items
-    Item.where(completed: false).count
-  end
-
-  def completed_items
-    Item.where(completed: true).count
-  end
-
-  def clear_completed
-    Item.where(completed: true).map(&:destroy)
-    update_dom!
+  def clear_completed(e)
+    store.clear_completed_items
+    update_dom
   end
 
   def render
@@ -19,28 +11,28 @@ class Footer
       footer class: 'footer' do
         span class: 'todo-count' do
           strong do
-            text uncomplete_items
+            text store.active.length
           end
           text ' items left'
         end
         ul class: 'filters' do
           li do
-            a href: '/', class: "#{"selected" if url == '/'}" do
+            a href: router.url_for(:all), class: "#{"selected" if router.current_url?(:all)}" do
               text 'All'
             end
           end
           li do
-            a href: '/active', class: "#{"selected" if url == '/active'}" do
+            a href: router.url_for(:active), class: "#{"selected" if router.current_url?(:active)}" do
               text 'Active'
             end
           end
           li do
-            a href: '/completed', class: "#{"selected" if url == '/completed'}" do
+            a href: router.url_for(:completed), class: "#{"selected" if router.current_url?(:completed)}" do
               text 'Completed'
             end
           end
         end
-        if completed_items > 0
+        if store.completed.length > 0
           button class: 'clear-completed', onclick: -> { clear_completed } do
             text 'Clear completed'
           end
