@@ -1,29 +1,20 @@
-GIT
-  remote: git://github.com/opal/opal.git
-  revision: 1210492667269f42a0fb44cd117a7a5ad4571ad7
+GEM
+  remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
-    opal (0.9.0.dev)
-      hike (~> 1.2)
-      sourcemap (~> 0.1.0)
-      sprockets (~> 3.1)
-      tilt (>= 1.4)
-
-PATH
-  remote: /Users/fazibear/dev/inesita
-  specs:
-    inesita (0.0.12)
+    hike (1.2.3)
+    inesita (0.1.0)
       opal (~> 0.8)
       opal-virtual-dom (~> 0.0.5)
       rack-rewrite (~> 1.5)
       sass (~> 3.4)
       slim (~> 3.0)
       thor (~> 0.19)
-
-GEM
-  remote: https://rubygems.org/
-  remote: https://rails-assets.org/
-  specs:
-    hike (1.2.3)
+    opal (0.8.0)
+      hike (~> 1.2)
+      sourcemap (~> 0.1.0)
+      sprockets (~> 3.1)
+      tilt (>= 1.4)
     opal-browser (0.2.0)
       opal
       paggio
@@ -50,9 +41,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  inesita!
-  opal!
-  opal-browser
+  inesita (~> 0.1)
+  opal (~> 0.8)
+  opal-browser (~> 0.2)
   rails-assets-todomvc-app-css!
   rails-assets-todomvc-common!
   rails-assets-virtual-dom!
