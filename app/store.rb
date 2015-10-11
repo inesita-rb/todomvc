@@ -2,7 +2,7 @@ class Store
   include Inesita::Store
 
   def initialize
-    @todos = get_from_local_storage
+    @todos = get_from_local_storage || {}
   end
 
   def add_item(name)
