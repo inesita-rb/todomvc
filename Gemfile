@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem 'opal', '~> 0.8'
 gem 'opal-browser', '~> 0.2'
-gem 'inesita', '~> 0.1'
+gem 'inesita', '~> 0.2.0'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-todomvc-app-css'

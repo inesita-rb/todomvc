@@ -30,17 +30,15 @@ class Item
   end
 
   def render
-    dom do
-      li class: "#{"completed" if props[:completed]} #{"editing" if props[:editing]}" do
-        div class: 'view' do
-          input class: 'toggle', type: 'checkbox', checked: props[:completed], onchange: ->(e) { on_check(e) }
-          label ondblclick: ->(e) { on_start_edit(e) } do
-            text props[:name]
-          end
-          button class: 'destroy', onclick: -> { on_delete }
+    li class: "#{"completed" if props[:completed]} #{"editing" if props[:editing]}" do
+      div class: 'view' do
+        input class: 'toggle', type: 'checkbox', checked: props[:completed], onchange: ->(e) { on_check(e) }
+        label ondblclick: ->(e) { on_start_edit(e) } do
+          text props[:name]
         end
-        input id: props[:id], class: 'edit', value: props[:name], onkeydown: ->(e) { on_edit(e) }, onblur: -> { on_lost_focus }
+        button class: 'destroy', onclick: -> { on_delete }
       end
+      input id: props[:id], class: 'edit', value: props[:name], onkeydown: ->(e) { on_edit(e) }, onblur: -> { on_lost_focus }
     end
   end
 end

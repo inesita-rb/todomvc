@@ -10,13 +10,11 @@ class Header
   end
 
   def render
-    dom do
-      header class: 'header' do
-        h1 do
-          text "todos"
-        end
-        input id: 'new-todo', class: 'new-todo', placeholder: 'What needs to be done?', autofocus: true, onkeydown: ->(e) { new_todo_key_down(e) }
+    header class: 'header' do
+      h1 do
+        text "todos"
       end
+      input id: 'new-todo', class: 'new-todo', placeholder: 'What needs to be done?', autofocus: true, onkeydown: ->(e) { new_todo_key_down(e) }
     end
   end
 end

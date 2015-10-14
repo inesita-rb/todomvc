@@ -7,17 +7,15 @@ class Layout
   end
 
   def render
-    dom do
-      div class: 'container' do
-        component Header
-        section class: 'main' do
-          input class: 'toggle-all', type: 'checkbox', onclick: ->(e) { toggle_all(e) }
-          ul class: 'todo-list' do
-            component outlet
-          end
+    div class: 'container' do
+      component Header
+      section class: 'main' do
+        input class: 'toggle-all', type: 'checkbox', onclick: ->(e) { toggle_all(e) }
+        ul class: 'todo-list' do
+          component outlet
         end
-        component Footer
       end
+      component Footer
     end
   end
 end
