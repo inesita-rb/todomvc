@@ -2,24 +2,16 @@ doctype html
 html
   head
     title TodoMVC
-    - if $DEVELOPMENT_MODE
-      link href=asset_path('stylesheet.css') rel='stylesheet' type='text/css'
-      - $SCRIPT_FILES.each do |file|
-        script src=asset_path(file)
-    - else
-        link href='stylesheet.css' rel='stylesheet' type='text/css'
-        script src='application.js'
-    javascript:
-     #{{$LOAD_ASSETS_CODE}}
-    body
-      section.todoapp#todoapp
-      footer.info
-        p Double-click to edit a todo
-        p
-          | Created by
-          a href='http://github.com/fazibear'
-          | fazibear
-        p
-          | Part of
-          a href="http://todomvc.com"
-          | TodoMVC
+    == Inesita.assets_code
+  body
+    section.todoapp#todoapp
+    footer.info
+      p Double-click to edit a todo
+      p
+        | Created by
+        a href='http://github.com/fazibear'
+        | fazibear
+      p
+        | Part of
+        a href="http://todomvc.com"
+        | TodoMVC

@@ -3,14 +3,14 @@ class Layout
 
   def toggle_all(e)
     store.change_all_items_completed(e.target.checked)
-    update_dom
+    render!
   end
 
   def render
     div class: 'container' do
       component Header
       section class: 'main' do
-        input class: 'toggle-all', type: 'checkbox', onclick: ->(e) { toggle_all(e) }
+        input class: 'toggle-all', type: 'checkbox', onclick: method(:toggle_all)
         ul class: 'todo-list' do
           component outlet
         end
@@ -19,4 +19,3 @@ class Layout
     end
   end
 end
-

@@ -3,7 +3,7 @@ class Footer
 
   def clear_completed(e)
     store.clear_completed_items
-    update_dom
+    render!
   end
 
   def render
@@ -32,7 +32,7 @@ class Footer
         end
       end
       if store.completed.length > 0
-        button class: 'clear-completed', onclick: -> { clear_completed } do
+        button class: 'clear-completed', onclick: method(:clear_completed) do
           text 'Clear completed'
         end
       end

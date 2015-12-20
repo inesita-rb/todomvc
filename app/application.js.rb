@@ -1,11 +1,10 @@
-require 'virtual-dom'
-require 'opal'
-require 'securerandom'
-require 'browser'
-require 'browser/storage'
-require 'browser/effects'
 require 'inesita'
 
+require 'securerandom'
+require 'browser/storage'
+require 'browser/effects'
+
+require 'layout'
 require 'router'
 require 'store'
 require_tree './components'
@@ -17,4 +16,3 @@ $document.ready do
     layout: Layout
   ).mount_to($document['todoapp'])
 end
-

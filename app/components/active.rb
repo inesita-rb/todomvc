@@ -7,4 +7,3 @@ class Active
     end
   end
 end
-

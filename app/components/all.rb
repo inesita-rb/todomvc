@@ -7,4 +7,3 @@ class All
     end
   end
 end
-

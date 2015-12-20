@@ -7,4 +7,3 @@ class Completed
     end
   end
 end
-
