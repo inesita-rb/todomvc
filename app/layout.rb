@@ -2,7 +2,7 @@ class Layout
   include Inesita::Layout
 
   def toggle_all(e)
-    store.change_all_items_completed(e.target.checked)
+    store.change_all_items_completed(e.target.checked?)
     render!
   end
 
