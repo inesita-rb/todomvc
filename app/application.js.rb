@@ -1,8 +1,11 @@
 require 'inesita'
 
 require 'securerandom'
+require 'browser'
 require 'browser/storage'
 require 'browser/effects'
+
+require 'virtual_dom/support/browser'
 
 require 'layout'
 require 'router'
