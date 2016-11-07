@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
-gem 'inesita', '~> 0.5.0'
+gem 'inesita'
+gem 'inesita-router'
 gem 'inesita-livereload'
 
 gem 'opal-browser'

@@ -5,10 +5,10 @@ GEM
     concurrent-ruby (1.0.2)
     ffi (1.9.14)
     hike (1.2.3)
-    inesita (0.5.0)
+    inesita (0.6.1)
       listen (~> 3.0)
       opal (>= 0.9, < 0.11)
-      opal-virtual-dom (~> 0.4.0)
+      opal-virtual-dom (~> 0.5.0)
       rack-rewrite (~> 1.5)
       sass (~> 3.4)
       slim (~> 3.0)
@@ -17,11 +17,14 @@ GEM
       listen (~> 3.0)
       opal (~> 0.9)
       websocket (~> 1.0)
+    inesita-router (0.1.0)
+      inesita (~> 0.6.0)
+      opal (~> 0.10)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    opal (0.10.2)
+    opal (0.10.3)
       hike (~> 1.2)
       sourcemap (~> 0.1.0)
       sprockets (~> 3.1)
@@ -29,7 +32,7 @@ GEM
     opal-browser (0.2.0)
       opal
       paggio
-    opal-virtual-dom (0.4.3)
+    opal-virtual-dom (0.5.0)
       opal
     paggio (0.2.6)
     rack (2.0.1)
@@ -57,8 +60,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  inesita (~> 0.5.0)
+  inesita
   inesita-livereload
+  inesita-router
   opal-browser
   rails-assets-todomvc-app-css!
   rails-assets-todomvc-common!

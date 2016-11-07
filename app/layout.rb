@@ -1,5 +1,5 @@
 class Layout
-  include Inesita::Layout
+  include Inesita::Component
 
   def toggle_all(e)
     store.change_all_items_completed(e.target.checked?)
@@ -12,7 +12,7 @@ class Layout
       section class: 'main' do
         input class: 'toggle-all', type: 'checkbox', onclick: method(:toggle_all)
         ul class: 'todo-list' do
-          component outlet
+          component router
         end
       end
       component Footer

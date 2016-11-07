@@ -1,4 +1,5 @@
 require 'inesita'
+require 'inesita-router'
 
 require 'securerandom'
 require 'browser'
@@ -12,10 +13,17 @@ require 'router'
 require 'store'
 require_tree './components'
 
-$document.ready do
-  Inesita::Application.new(
-    router: Router,
-    store: Store,
-    layout: Layout
-  ).mount_to($document['todoapp'])
+class Application
+  include Inesita::Component
+
+  inject Store
+  inject Router
+
+  def render
+    component Layout
+  end
+end
+
+Inesita::Browser.ready? do
+  Application.mount_to($document['todoapp'])
 end
