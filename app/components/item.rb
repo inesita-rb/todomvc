@@ -7,7 +7,7 @@ class Item
   end
 
   def on_check(e)
-    store.change_item_completed(props[:id], e.target.checked?)
+    store.change_item_completed(props[:id], e.target.checked)
     render!
   end
 
@@ -18,7 +18,7 @@ class Item
   end
 
   def on_edit(e)
-    key = e.code
+    key = e.keyCode
     return if key != 13 && key != 27
     store.change_item_name(props[:id], e.target.value) if key == 13
     on_lost_focus
@@ -31,14 +31,14 @@ class Item
 
   def render
     li class: "#{'completed' if props[:completed]} #{'editing' if props[:editing]}" do
-      div class: 'view' do
-        input class: 'toggle', type: 'checkbox', checked: props[:completed], onchange: method(:on_check)
+      div.view do
+        input.toggle type: 'checkbox', checked: props[:completed], onchange: method(:on_check)
         label ondblclick: ->(e) { on_start_edit(e) } do
           text props[:name]
         end
-        button class: 'destroy', onclick: -> { on_delete }
+        button.destroy onclick: -> { on_delete }
       end
-      input id: props[:id], class: 'edit', value: props[:name], onkeydown: method(:on_edit), onblur: method(:on_lost_focus)
+      input.edit id: props[:id], value: props[:name], onkeydown: method(:on_edit), onblur: method(:on_lost_focus)
     end
   end
 end

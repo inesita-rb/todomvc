@@ -7,4 +7,3 @@ class Router
     route '/completed', to: Completed
   end
 end
-

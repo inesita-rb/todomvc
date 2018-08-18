@@ -8,13 +8,13 @@ class Footer
 
   def render
     footer class: 'footer' do
-      span class: 'todo-count' do
+      span.todo_count do
         strong do
           text store.active.length
         end
         text ' items left'
       end
-      ul class: 'filters' do
+      ul.filters do
         li do
           a href: router.url_for(:all), class: "#{"selected" if router.current_url?(:all)}" do
             text 'All'
