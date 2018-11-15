@@ -40,7 +40,7 @@ GEM
     paggio (0.2.6)
     parser (2.3.3.1)
       ast (~> 2.2)
-    rack (2.0.5)
+    rack (2.0.6)
     rack-rewrite (1.5.1)
     rails-assets-todomvc-app-css (2.1.2)
     rails-assets-todomvc-common (1.0.5)
@@ -79,4 +79,4 @@ DEPENDENCIES
   slim
 
 BUNDLED WITH
-   1.16.1
+   1.17.1
